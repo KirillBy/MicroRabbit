@@ -40,10 +40,10 @@ namespace MicroRabbit.Banking.Api
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Banking Microservice", Version = "v1"});
             });
             services.AddMediatR(typeof(Startup));
-            RefisterServices(services);
+            RegisterServices(services);
         }
 
-        private void RefisterServices(IServiceCollection services)
+        private void RegisterServices(IServiceCollection services)
         {
             DependencyContainer.RegisterServices(services);
         }
